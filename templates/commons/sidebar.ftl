@@ -16,10 +16,10 @@
             </ul>
 
             <#if (config.sidebar_social_email?has_content) >
-                <ul class="icons">
-                    <h3>Contact</h3>
-                    <li><a href="mailto:${config.sidebar_social_email}" title="Email" class="fa fa-envelope"> via Email</a></li><br>
-                </ul>
+                 <ul class="icons">
+                     <h3>Contact${config.sidebar_social_email_corp?has_content?then(' Us', '')}</h3>
+                     <li><a href="mailto:${config.sidebar_social_email}" title="Email" class="fa fa-envelope"> via Email</a></li><br>
+                 </ul>
             </#if>
 
             <ul class="icons">

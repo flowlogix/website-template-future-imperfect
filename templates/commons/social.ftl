@@ -71,7 +71,8 @@
 </#if>
 
 <#if (config.sidebar_social_linkedin?has_content) >
-<li><a href="//linkedin.com/in/${config.sidebar_social_linkedin}" target="_blank" title="LinkedIn" class="fa fa-linkedin"></a></li>
+<#assign linkedin_path = config.sidebar_social_linkedin_corp?has_content?then('company', 'in')>
+<li><a href="//linkedin.com/${linkedin_path}/${config.sidebar_social_linkedin}" target="_blank" title="LinkedIn" class="fa fa-linkedin"></a></li>
 </#if>
 
 <#if (config.sidebar_social_slideshare?has_content) >

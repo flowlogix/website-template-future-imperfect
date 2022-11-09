@@ -21,6 +21,9 @@
 		<#if (config.site_google_trackingid?has_content)>
 			<#include "commons/google-analytics.ftl" />
 		</#if>
+		<#if (config.clicky_trackingid?has_content)>
+			<#include "commons/clicky.ftl" />
+		</#if>
 		<!-- This is called by default since this theme uses highlight.js -->
 		<script>hljs.initHighlightingOnLoad();</script>
 		<!--[if lte IE 8]><script src="/js/ie/respond.min.js"></script><![endif]-->

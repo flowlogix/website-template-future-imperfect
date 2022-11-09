@@ -21,7 +21,7 @@
 		<#if (config.site_google_trackingid?has_content)>
 			<#include "commons/google-analytics.ftl" />
 		</#if>
-		<#if (config.clicky_trackingid?has_content)>
+		<#if (config.site_clicky_trackingid?has_content)>
 			<#include "commons/clicky.ftl" />
 		</#if>
 		<!-- This is called by default since this theme uses highlight.js -->

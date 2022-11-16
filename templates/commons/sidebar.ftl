@@ -89,8 +89,8 @@
         </section>
     </#if>
 
-
-    <!-- About -->
+    <#if (config.sidebar_intro_about?? && config.sidebar_intro_about?boolean == true )>
+        <!-- About -->
         <section class="blurb">
             <h2>About</h2>
             <p>${config.sidebar_intro_about}</p>
@@ -99,11 +99,10 @@
                 <li><a href="${content.rootpath}${config.sidebar_intro_about_learnMore}" class="button">Learn More</a></li>
             </ul>
         </section>
+    </#if>
 
-
-        <section id="footer">
-            <p class="copyright">&copy; ${config.site_title}. Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a>. Ported For SSG by <a href="https://github.com/jpescador/hugo-future-imperfect">Julio Pescador</a>. Adapted to JBake by <a href="//github.com/manikmagar" target="_blank">Manik Magar</a>. Baked with <a href="http://jbake.org">JBake ${version}</a>.
-            <#if (config.render_sitemap?boolean)><a href="/${config.sitemap_file}" target="_blank">Sitemap</a>.</#if></p>
-        </section>
-
+    <section id="footer">
+        <p class="copyright">&copy; ${config.site_title}. Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a>. Ported For SSG by <a href="https://github.com/jpescador/hugo-future-imperfect">Julio Pescador</a>. Adapted to JBake by <a href="//github.com/manikmagar" target="_blank">Manik Magar</a>. Baked with <a href="http://jbake.org">JBake ${version}</a>.
+        <#if (config.render_sitemap?boolean)><a href="/${config.sitemap_file}" target="_blank">Sitemap</a>.</#if></p>
+    </section>
 </section>

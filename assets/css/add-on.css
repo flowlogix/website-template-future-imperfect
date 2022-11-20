@@ -104,7 +104,8 @@ article.post footer .stats {
         filter: alpha(opacity=87);
 
         /* Modern Browsers */
-        opacity: 0.87;
+        /* doesn't work with Safari correctly, removes bullet lists */
+        /* opacity: 0.87; */
     }
 
 #header h2 {

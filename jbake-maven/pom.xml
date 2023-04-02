@@ -10,6 +10,7 @@
 
     <properties>
         <asm.version>9.5</asm.version>
+        <groovy.version>3.0.17</groovy.version>
     </properties>
 
     <build>
@@ -74,6 +75,26 @@
                             <groupId>com.github.jnr</groupId>
                             <artifactId>jnr-posix</artifactId>
                             <version>3.1.16</version>
+                        </dependency>
+                        <dependency>
+                            <groupId>org.codehaus.groovy</groupId>
+                            <artifactId>groovy</artifactId>
+                            <version>${groovy.version}</version>
+                        </dependency>
+                        <dependency>
+                            <groupId>org.codehaus.groovy</groupId>
+                            <artifactId>groovy-templates</artifactId>
+                            <version>${groovy.version}</version>
+                        </dependency>
+                        <dependency>
+                            <groupId>org.codehaus.groovy</groupId>
+                            <artifactId>groovy-xml</artifactId>
+                            <version>${groovy.version}</version>
+                        </dependency>
+                        <dependency>
+                            <groupId>org.codehaus.groovy</groupId>
+                            <artifactId>groovy-dateutil</artifactId>
+                            <version>${groovy.version}</version>
                         </dependency>
                     </dependencies>
                 </plugin>

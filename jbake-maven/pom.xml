@@ -9,6 +9,7 @@
     <name>Web Site Templates</name>
 
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <asm.version>9.5</asm.version>
         <groovy.version>3.0.17</groovy.version>
     </properties>

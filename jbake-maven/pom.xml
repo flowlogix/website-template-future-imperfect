@@ -40,7 +40,7 @@
                 <artifactId>sass-cli-maven-plugin</artifactId>
                 <configuration>
                     <args>
-                        <arg>${project.basedir}/assets/sass:${project.build.directory}/output/css</arg>
+                        <arg>${project.basedir}/website-template/assets/sass:${project.build.directory}/output/css</arg>
                         <arg>--no-source-map</arg>
                     </args>
                 </configuration>

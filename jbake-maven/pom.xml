@@ -13,6 +13,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <asm.version>9.5</asm.version>
         <groovy.version>3.0.17</groovy.version>
+        <sass.skip>false</sass.skip>
     </properties>
 
     <build>
@@ -38,14 +39,6 @@
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>3.1.0</version>
-                <configuration>
-                    <executable>sass</executable>
-                    <arguments>
-                        <argument>${project.basedir}/website-template/assets/sass:${project.build.directory}/output/css</argument>
-                        <argument>--update</argument>
-                        <argument>--no-source-map</argument>
-                    </arguments>
-                </configuration>
                 <executions>
                     <execution>
                         <id>sass-exec</id>
@@ -53,6 +46,15 @@
                         <goals>
                             <goal>exec</goal>
                         </goals>
+                        <configuration>
+                            <executable>sass</executable>
+                            <arguments>
+                                <argument>${project.basedir}/website-template/assets/sass:${project.build.directory}/output/css</argument>
+                                <argument>--update</argument>
+                                <argument>--no-source-map</argument>
+                            </arguments>
+                            <skip>${sass.skip}</skip>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>

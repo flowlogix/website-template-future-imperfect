@@ -13,7 +13,6 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <asm.version>9.5</asm.version>
         <groovy.version>3.0.17</groovy.version>
-        <sass.version>1.62.0</sass.version>
     </properties>
 
     <build>
@@ -36,20 +35,22 @@
                 </executions>
             </plugin>
             <plugin>
-                <groupId>us.hebi.sass</groupId>
-                <artifactId>sass-cli-maven-plugin</artifactId>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.1.0</version>
                 <configuration>
-                    <args>
-                        <arg>${project.basedir}/website-template/assets/sass:${project.build.directory}/output/css</arg>
-                        <arg>--no-source-map</arg>
-                    </args>
+                    <executable>sass</executable>
+                    <arguments>
+                        <argument>${project.basedir}/website-template/assets/sass:${project.build.directory}/output/css</argument>
+                        <argument>--no-source-map</argument>
+                    </arguments>
                 </configuration>
                 <executions>
                     <execution>
                         <id>sass-exec</id>
                         <phase>generate-resources</phase>
                         <goals>
-                            <goal>run</goal>
+                            <goal>exec</goal>
                         </goals>
                     </execution>
                 </executions>
@@ -119,11 +120,6 @@
                             <version>${groovy.version}</version>
                         </dependency>
                     </dependencies>
-                </plugin>
-                <plugin>
-                    <groupId>us.hebi.sass</groupId>
-                    <artifactId>sass-cli-maven-plugin</artifactId>
-                    <version>1.0.2</version>
                 </plugin>
             </plugins>
         </pluginManagement>

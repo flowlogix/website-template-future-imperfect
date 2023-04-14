@@ -13,6 +13,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <asm.version>9.5</asm.version>
         <groovy.version>3.0.17</groovy.version>
+        <sass.root>website-template</sass.root>
         <sass.skip>false</sass.skip>
     </properties>
 
@@ -49,7 +50,7 @@
                         <configuration>
                             <executable>sass</executable>
                             <arguments>
-                                <argument>${project.basedir}/website-template/assets/sass:${project.build.directory}/output/css</argument>
+                                <argument>${project.basedir}/${sass.root}/assets/sass:${project.build.directory}/output/css</argument>
                                 <argument>--update</argument>
                                 <argument>--no-source-map</argument>
                             </arguments>

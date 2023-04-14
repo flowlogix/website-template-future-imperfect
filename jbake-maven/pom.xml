@@ -42,6 +42,7 @@
                     <executable>sass</executable>
                     <arguments>
                         <argument>${project.basedir}/website-template/assets/sass:${project.build.directory}/output/css</argument>
+                        <argument>--update</argument>
                         <argument>--no-source-map</argument>
                     </arguments>
                 </configuration>

@@ -8,13 +8,13 @@
 
     <nav class="links">
         <ul>
-        	<#list config.site_menus_main as menuItem1>
-        		<#if (config.site_menus_main_showTagsDropdown?boolean)?? == true && menuItem1 == 'tags'>
+        	<#list config.site_menu as menuItem1>
+        		<#if (config.site_menu_showTagsDropdown?boolean)?? == true && menuItem1 == 'tags'>
         			<li>
-	                    <a href="<#if (config['site_menus_main_' + menuItem1 + '_url'] != "/")> ${content.rootpath}${config['site_menus_main_' + menuItem1 + '_url']}<#else> ${config.site_host}</#if>">
+	                    <a href="<#if (config['site_menu_' + menuItem1 + '_url'] != "/")> ${content.rootpath}${config['site_menu_' + menuItem1 + '_url']}<#else> ${config.site_host}</#if>">
 	                    
 	                       
-	                       <i class="${config['site_menus_main_' + menuItem1 + '_icon']}">&nbsp;</i>${config['site_menus_main_' + menuItem1 + '_label']}
+	                       <i class="${config['site_menu_' + menuItem1 + '_icon']}">&nbsp;</i>${config['site_menu_' + menuItem1 + '_label']}
 	                        
 	                    </a>
 	                    <ul class="dropdown-menu">
@@ -27,9 +27,9 @@
         			
         		<#else>
         			<li>
-	                    <a href="<#if (config['site_menus_main_' + menuItem1 + '_url'] != "/")> ${content.rootpath}${config['site_menus_main_' + menuItem1 + '_url']}<#else> ${config.site_host}</#if>">
+	                    <a href="<#if (config['site_menu_' + menuItem1 + '_url'] != "/")> ${content.rootpath}${config['site_menu_' + menuItem1 + '_url']}<#else> ${config.site_host}</#if>">
 	                       
-	                            <i class="${config['site_menus_main_' + menuItem1 + '_icon']}">&nbsp;</i>${config['site_menus_main_' + menuItem1 + '_label']}
+	                            <i class="${config['site_menu_' + menuItem1 + '_icon']}">&nbsp;</i>${config['site_menu_' + menuItem1 + '_label']}
 	                        
 	                    </a>
                 	</li>
@@ -74,11 +74,11 @@
     <!-- Links -->
         <section>
             <ul class="links">
-                <#list config.site_menus_main as menuItem>
+                <#list config.site_menu as menuItem>
         		 <li>
-                    <a href="<#if (config['site_menus_main_' + menuItem + '_url'] != "/")> ${content.rootpath}${config['site_menus_main_' + menuItem + '_url']}<#else> ${config.site_host}</#if>">
+                    <a href="<#if (config['site_menu_' + menuItem + '_url'] != "/")> ${content.rootpath}${config['site_menu_' + menuItem + '_url']}<#else> ${config.site_host}</#if>">
                        
-                            <i class="${config['site_menus_main_' + menuItem + '_icon']}">&nbsp;</i>${config['site_menus_main_' + menuItem + '_label']}
+                            <i class="${config['site_menu_' + menuItem + '_icon']}">&nbsp;</i>${config['site_menu_' + menuItem + '_label']}
                         
                     </a>
                 </li>

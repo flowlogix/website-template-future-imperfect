@@ -4,11 +4,11 @@
     <!-- Intro -->
         <section id="intro">
             <ul class="sidebar-links links">
-                <#list config.site_menus_main as menuItem>
+                <#list config.site_menu as menuItem>
         		 <li>
-                    <a href="<#if (config['site_menus_main_' + menuItem + '_url'] != "/")> ${content.rootpath}${config['site_menus_main_' + menuItem + '_url']}<#else> ${config.site_host}</#if>">
+                    <a href="<#if (config['site_menu_' + menuItem + '_url'] != "/")> ${content.rootpath}${config['site_menu_' + menuItem + '_url']}<#else> ${config.site_host}</#if>">
                        
-                            <i class="${config['site_menus_main_' + menuItem + '_icon']}">&nbsp;</i>${config['site_menus_main_' + menuItem + '_label']}
+                            <i class="${config['site_menu_' + menuItem + '_icon']}">&nbsp;</i>${config['site_menu_' + menuItem + '_label']}
                         
                     </a>
                 </li>

@@ -1,0 +1,3 @@
+[submodule "jbake-maven"]
+	path = jbake-maven
+	url = git@github.com:flowlogix/jbake-maven.git
